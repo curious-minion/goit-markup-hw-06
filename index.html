@@ -63,13 +63,89 @@
         <a class="link" href="#" data-modal-open>Заказать услугу</a>
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-              provident eligendi quod cupiditate perferendis cumque. Eaque animi
-              at nostrum. Facilis itaque commodi maxime molestias neque earum,
-              numquam aut hic nobis.
-            </p>
-            <button class="button-close" data-modal-close>X</button>
+            <button class="button-close" data-modal-close>
+              <svg class="close-icon" width="18" height="18">
+                <use href="./images/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+
+            <form class="form" autocomplete="off">
+              <label class="form-field">
+                <span class="form-label">Имя</span>
+                <input
+                  type="text"
+                  class="form-input"
+                  name="name"
+                  placeholder=" "
+                />
+                <svg class="form-icon" width="18" height="18">
+                  <use href="./images/sprite.svg#icon-person"></use>
+                </svg>
+              </label>
+              <label class="form-field">
+                <span class="form-label">Телефон</span>
+                <input
+                  type="tel"
+                  class="form-input"
+                  name="phone"
+                  placeholder=" "
+                />
+                <svg class="form-icon" width="18" height="18">
+                  <use href="./images/sprite.svg#icon-phone"></use>
+                </svg>
+              </label>
+              <label class="form-field">
+                <span class="form-label">Почта</span>
+                <input
+                  type="email"
+                  class="form-input"
+                  name="email"
+                  placeholder=" "
+                />
+                <svg class="form-icon" width="18" height="18">
+                  <use href="./images/sprite.svg#icon-email"></use>
+                </svg>
+              </label>
+              <label class="form-field">
+                <span class="form-label">Комментарий</span>
+                <textarea
+                  name="comment"
+                  class="form-input comment"
+                  placeholder="Введите текст"
+                ></textarea>
+              </label>
+            </form>
+
+            <label class="agreement">
+              <span class="agreement-text"
+                >Соглашаюсь с рассылкой и принимаю</span
+              >
+              <a class="terms" href="#">Условия договора</a>
+              <input
+                class="checkbox"
+                type="checkbox"
+                name="contract-conditions"
+              />
+              <svg class="checkbox-icon" width="16" height="15">
+                <use href="./images/sprite.svg#icon-checkbox"></use>
+              </svg>
+            </label>
+            <!-- <input
+                class="checkbox"
+                aria-labelledby="agreement terms"
+                type="checkbox"
+                name="contract-conditions"
+              />
+              <label class="agreement" id="agreement"
+                >Соглашаюсь с рассылкой и принимаю</label
+              >
+              <a class="terms" id="terms" href="#">Условия договора</a>
+              <svg class="checkbox-icon" width="16" height="15">
+                <use href="./images/sprite.svg#icon-checkbox"></use>
+              </svg> -->
+
+            <button class="link submit" type="submit">Отправить</button>
           </div>
         </div>
       </section>
