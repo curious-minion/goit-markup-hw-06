@@ -351,11 +351,14 @@ a {
 
   text-align: left;
 }
+
 .form-input {
   height: 40px;
   padding-left: 40px;
   border-radius: 4px;
   border: 1px solid var(--input-border);
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-icon {
@@ -383,7 +386,6 @@ a {
   margin-bottom: 30px;
 
   padding-left: 28px;
-  /* padding-right: 16px; */
 }
 
 .checkbox {
@@ -396,6 +398,31 @@ a {
 
 .agreement-text {
   display: inline-block;
+}
+
+.agreement-text::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+
+  left: 12px;
+  top: 4px;
+
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid var(--title-color);
+  border-radius: 2px;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked ~ .agreement-text::after {
+  border: 2px solid var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url(../images/icon-checkbox.svg);
+
+  background-size: contain;
+  background-origin: border-box;
 }
 
 .terms {
@@ -411,6 +438,10 @@ a {
 
 .form-input:focus ~ .form-icon {
   fill: var(--accent-color);
+}
+
+.form-input:focus {
+  border: 1px solid var(--accent-color);
 }
 
 .link.submit:hover,
@@ -734,7 +765,7 @@ footer {
   margin-left: 93px;
 }
 
-.subscription-wrap {
+.subscription-form {
   display: flex;
   margin-top: 20px;
 }

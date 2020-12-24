@@ -116,20 +116,19 @@
                   placeholder="Введите текст"
                 ></textarea>
               </label>
-              <label class="agreement">
-                <span class="agreement-text"
-                  >Соглашаюсь с рассылкой и принимаю</span
-                >
-                <a class="terms" href="#">Условия договора</a>
+              <div class="agreement">
                 <input
+                  id="checkbox"
                   class="checkbox"
                   type="checkbox"
                   name="contract-conditions"
                 />
-                <svg class="checkbox-icon" width="16" height="15">
-                  <use href="./images/sprite.svg#icon-checkbox"></use>
-                </svg>
-              </label>
+                <label class="agreement-text" for="checkbox">
+                  Соглашаюсь с рассылкой и принимаю
+                  <a class="terms" href="#">Условия договора</a>
+                </label>
+              </div>
+
               <button class="link submit" type="submit">Отправить</button>
             </form>
           </div>
@@ -505,23 +504,22 @@
         </div>
         <div class="subscription">
           <p>подпишитесь на рассылку</p>
-          <div class="subscription-wrap">
-            <label class="subscription-field">
-              <input
-                type="email"
-                class="subscription-input"
-                name="email"
-                maxlength="45"
-                placeholder="E-mail"
-              />
-            </label>
+          <form class="subscription-form" autocomplete="off">
+            <input
+              type="email"
+              class="subscription-input"
+              name="email"
+              maxlength="45"
+              placeholder="E-mail"
+            />
+
             <button class="subscription-submit" type="submit">
               Подписаться
               <svg class="icon-send" width="24" height="24">
                 <use href="./images/sprite.svg#icon-send"></use>
               </svg>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </footer>
